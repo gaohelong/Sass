@@ -1,0 +1,27 @@
+// 定义全局变量赋值.
+$nav-color: #F90;
+$width-100: 100px;
+
+// 导航.
+.nav {
+    width: $width-100;
+    color: $nav-color;
+}
+
+// 自导航.
+.sub-nav {
+    $width-100: 150px; // 定义局部变量(只在当前块级作用域中生效).
+    width: $width-100;
+    color: $nav-color;
+}
+
+.sub-nav {
+    padding: 10px $width-100 10px 15px;
+    width: $width-100;
+}
+
+// 选中.
+$highlight-color: #F90;
+.selected {
+    border: 1px solid $highlight-color;
+}
