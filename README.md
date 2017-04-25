@@ -1,5 +1,5 @@
 #SASS
-> https://www.sass.hk/
+https://www.sass.hk/
 
 #Ubuntu安装Sass.
 ##安装ruby
