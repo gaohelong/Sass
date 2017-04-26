@@ -1,0 +1,13 @@
+// 导入文件.
+@import "../global/colors/color";
+@import "../global/lists/list";
+
+$link-color: #c1c !default; // 如果这个变量被声明赋值了，那就用它声明的值，否则就用这个默认值.
+
+.domain .table .title {
+    color: $color-red;
+}
+
+.domain a {
+    color: $link-color;
+}

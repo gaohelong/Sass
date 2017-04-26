@@ -1,3 +1,6 @@
+// 导入文件.
+@import "colors/color";
+
 // 定义全局变量赋值.
 $nav-color: #F90;
 $width-100: 100px;
@@ -6,6 +9,7 @@ $width-100: 100px;
 .nav {
     width: $width-100;
     color: $nav-color;
+    background-color: $color-red; // 使用导入文件中的变量.
 }
 
 // 自导航.
@@ -24,4 +28,61 @@ $width-100: 100px;
 $highlight-color: #F90;
 .selected {
     border: 1px solid $highlight-color;
+}
+
+// 嵌套css规则.
+#content {
+    article {
+        h1 { color: #333; }
+        p { margin-bottom: 1.4em; }
+    }
+    aside { background-color: #eee; }
+    .nav { font-size: 12px; }
+}
+
+// 父选择器的标识符&.
+article a {
+    color: blue;
+    &:hover { color: red; }
+}
+
+#content aside {
+    color: red;
+    #side & { color: green }
+}
+
+// 群组选择器的嵌套.
+.container {
+    h1, h2, h3 { margin-bottom: .8em; }
+}
+
+nav, aside {
+    a { color: blue; }
+}
+
+// 子组合选择器和同层组合选择器：>、+和~.
+article {
+    ~ article { border-top: 1px dashed #ccc; }
+    > section { background: #eee; }
+    dl > {
+        dt { color: #333; }
+        dd { color: #555; }
+    }
+    nav + & { margin-top: 0; }
+}
+
+// 嵌套属性.
+nav {
+    border: {
+        style: solid;
+        width: 1px;
+        color: #ccc;
+    }
+}
+
+nav {
+    border: 1px solid #ccc {
+        left: 0px;
+        right: 0px;
+    }
 }
