@@ -46,6 +46,13 @@ article a {
     &:hover { color: red; }
 }
 
+a {
+    font-weight: bold;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+    body.firefox & { font-weight: normal; }
+}
+
 #content aside {
     color: red;
     #side & { color: green }

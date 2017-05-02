@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,2BAAiC;EAC7B,OAAO,EAAE,oBAAoB;;;AAMrC,CAAE;EACE,KAAK,EAAE,IAAU;;;AAIrB,CAAE;EACE,IAAI,EAAE,QAAQ;EAEd,KAAK,EAAE,KAAQ;EACf,KAAK,EAAE,CAAY;EACnB,MAAM,EAAE,KAAS;EACjB,WAAW,EAAE,GAAa;;;AAI9B,CAAE;EAGE,IAAI,EAAE,SAA6B;;;AAMvC,GAAI;EAAC,MAAM,EAAE,+GAAiJ;;;AAG9J,CAAE;EACE,KAAK,EAAE,GAAe",
+"sources": ["../../../sass/css/global/calculation.scss"],
+"names": [],
+"file": "calculation.css"
+}

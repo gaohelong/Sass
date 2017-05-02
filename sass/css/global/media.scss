@@ -1,0 +1,26 @@
+// sass 中 @media 指令与 CSS 中用法一样，只是增加了一点额外的功能：允许其在 CSS 规则中嵌套。如果 @media 嵌套在 CSS 规则内，编译时，@media 将被编译到文件的最外层，包含嵌套的父选择器。这个功能让 @media 用起来更方便，不需要重复使用选择器，也不会打乱 CSS 的书写流程。
+.sidebar {
+    width: 300px;
+    @media screen and (orientation: landscape) {
+        width: 500px;
+    }
+}
+
+// @media 的 queries 允许互相嵌套使用，编译时，Sass 自动添加 and
+@media screen {
+    .sidebar {
+        @media (orientation: landscape) {
+            width: 500px;
+        }
+    }
+}
+
+// @media 甚至可以使用 SassScript（比如变量，函数，以及运算符）代替条件的名称或者值：
+$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+@media #{$media} and ($feature: $value) {
+    .sidebar {
+        width: 500px;
+    }
+}

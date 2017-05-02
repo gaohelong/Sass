@@ -1,0 +1,29 @@
+body.firefox .header:before {
+  content: "Hi, Firefox users!";
+}
+
+p {
+  width: 12px;
+}
+
+p {
+  font: 10px/8px;
+  width: 500px;
+  width: 1;
+  height: 250px;
+  margin-left: 9px;
+}
+
+p {
+  font: 12px/30px;
+}
+
+div {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled="false", startColorstr="#FF00FF00", endColorstr="#80FF0000");
+}
+
+p {
+  width: 7px;
+}
+
+/*# sourceMappingURL=calculation.css.map */

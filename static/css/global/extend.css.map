@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,qBAAO;EACH,MAAM,EAAE,QAAQ;EAChB,gBAAgB,EAAE,IAAI;;;AAE1B,yCAAiB;EACb,gBAAgB,EAAE,wBAAwB;;;AAE9C,aAAc;EAEV,YAAY,EAAE,GAAG",
+"sources": ["../../../sass/css/global/extend.scss"],
+"names": [],
+"file": "extend.css"
+}

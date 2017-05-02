@@ -1,0 +1,12 @@
+// 下面代码的意思是将.error下的所有样式继承给.seriousError，border-width: 3px; 是单独给.seriousError设定特殊样式，这样，使用.seriousError的地方可以不再使用.error。
+.error {
+    border: 1px #f00;
+    background-color: #fdd;
+}
+.error.intrusion {
+    background-image: url("/image/hacked.png");
+}
+.seriousError {
+    @extend .error;
+    border-width: 3px;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAMA,qBAAsB;EAClB,KAAK,ECNG,GAAG;;;ADSf,SAAU;EACN,KAAK,ECRI,IAAI;;;ADejB;;;;;;EAME",
+"sources": ["../../../sass/css/domain/domain.scss","../../../sass/css/global/colors/color.scss"],
+"names": [],
+"file": "domain.css"
+}

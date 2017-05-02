@@ -1,0 +1,40 @@
+// 【字符串】
+// SassScript 支持 CSS 的两种字符串类型：有引号字符串 (quoted strings)，如 "Lucida Grande" 'http://sass-lang.com'；与无引号字符串 (unquoted strings)，如 sans-serif bold，在编译 CSS 文件时不会改变其类型。只有一种情况例外，使用 #{} (interpolation) 时，有引号字符串将被编译为无引号字符串，这样便于在 mixin 中引用选择器名
+@mixin firefox-message($selector) { 
+    body.firefox #{$selector}:before { 
+        content: "Hi, Firefox users!"; 
+    } 
+} 
+@include firefox-message(".header");
+
+// 【加法运算】
+p { 
+    width: 10px + 2px;
+}
+
+// 【除法运算】
+p {
+    font: 10px/8px; // Plain CSS, no division 
+    $width: 1000px; 
+    width: $width/2; // Uses a variable, does division 
+    width: round(1.5)/2; // Uses a function, does division 
+    height: (500px/2); // Uses parentheses, does division 
+    margin-left: 5px + 8px/2px; // Uses +, does division 
+}
+
+// 如果需要使用变量，同时又要确保/不做除法运算而是完整地编译到CSS文件中, 只需要用 #{} 插值语句将变量包裹.
+p {
+    $font-size: 12px;
+    $line-height: 30px;
+    font: #{$font-size}/#{$line-height};
+}
+
+// IE 滤镜要求所有的颜色值包含 alpha 层，而且格式必须固定 #AABBCCDD，使用 ie_hex_str 函数可以很容易地将颜色转化为 IE 滤镜要求的格式.
+$translucent-red: rgba(255, 0, 0, 0.5);
+$green: #00ff00;
+div {filter: progid:DXImageTransform.Microsoft.gradient(enabled="false", startColorstr="#{ie-hex-str($green)}", endColorstr="#{ie-hex-str($translucent-red)}");}
+
+// 【圆括号】
+p {
+    width: 1px + (2px * 3);
+} 
