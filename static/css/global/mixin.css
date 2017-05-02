@@ -1,3 +1,72 @@
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 4px;
+  margin-top: 10px;
+}
 
+a {
+  color: blue;
+  background-color: red;
+}
+
+p {
+  background-color: #fc0;
+  font-size: 20px;
+}
+
+.p1 {
+  display: inline-block;
+}
+.p1:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .p1 {
+  height: 1px;
+}
+
+.p2 {
+  border-color: blue;
+  border-width: 10px;
+  border-style: dashed;
+}
+
+.p3 {
+  width: 100px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.p4 {
+  border-color: blue;
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.p5 {
+  border-color: blue;
+  border-width: 10px;
+  border-style: dashed;
+}
+
+.p6 {
+  border-color: blue;
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.p7 {
+  border-color: blue;
+  border-width: 20px;
+  border-style: dashed;
+}
 
 /*# sourceMappingURL=mixin.css.map */
