@@ -1,0 +1,13 @@
+// Core variables and mixins.
+@import "variables/variables";  // 加载variables/_variables.scss
+@import "mixins/mixins";        // 加载mixins/_mixins.scss
+
+// Core CSS
+@import "reboot";               // 给html元素设置默认值……
+
+// Components
+@import "components/alert";     // 提示框.
+@import "components/dialog";    // 弹出窗口.
+
+// Utils
+@import "utils/utils";
