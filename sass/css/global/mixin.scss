@@ -105,3 +105,67 @@ p {
 .p7 {
     @include sexy-border($color: blue, $width: 20px);
 }
+
+// 3.2. 参数变量 (Variable Arguments)有时，不能确定混合指令需要使用多少个参数，比如一个关于 box-shadow 的混合指令不能确定有多少个 'shadow' 会被用到。这时，可以使用参数变量 … 声明（写在参数的最后方）告诉 Sass 将这些参数视为值列表处理：
+@mixin box-shadow($shadows...) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+
+.shadows {
+    @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+}
+
+// 参数变量也可以用在引用混合指令的时候 (@include)，与平时用法一样，将一串值列表中的值逐条作为参数引用：
+@mixin colors($text, $background, $border) {
+    color: $text;
+    background-color: $background;
+    border-color: $border;
+}
+
+$values: #ff0000, #00ff00, #0000ff;
+.primary {
+    @include colors($values...);
+}
+
+// 4. 向混合样式中导入内容 (Passing Content Blocks to a Mixin)在引用混合样式的时候，可以先将一段代码导入到混合指令中，然后再输出混合样式，额外导入的部分将出现在 @content 标志的地方：
+@mixin apply-to-ie6-only {
+    * html {
+        @content;
+    }
+}
+
+@include apply-to-ie6-only {
+    #logo {
+        background-color: #fff;
+    }
+}
+
+// 4实例.
+$color: white;
+@mixin colors($color: blue) {
+    background-color: $color;
+    @content;
+    border-color: $color;
+}
+
+.colors {
+    @include colors {
+        color: $color;
+    }
+}
+
+.colors1 {
+    @include colors(red) {
+        font-size: 14px;
+    }
+}
+
+#sidebar {
+    $sidebar-width: 300px;
+    width: $sidebar-width;
+    @include colors {
+        width: $sidebar-width / 3;
+    }
+}

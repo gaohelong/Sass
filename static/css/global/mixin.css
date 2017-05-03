@@ -69,4 +69,39 @@ p {
   border-style: dashed;
 }
 
+.shadows {
+  -moz-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  -webkit-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+}
+
+.primary {
+  color: #ff0000;
+  background-color: #00ff00;
+  border-color: #0000ff;
+}
+
+* html #logo {
+  background-color: #fff;
+}
+
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+
+.colors1 {
+  background-color: red;
+  font-size: 14px;
+  border-color: red;
+}
+
+#sidebar {
+  width: 300px;
+  background-color: blue;
+  width: 100px;
+  border-color: blue;
+}
+
 /*# sourceMappingURL=mixin.css.map */
