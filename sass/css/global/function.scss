@@ -1,0 +1,63 @@
+// Sass 支持自定义函数，并能在任何属性值或 Sass script 中使用：
+$grid-width: 40px;
+$gutter-width: 10px;
+@function grid-width($n) {
+    @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar { width: grid-width(5); }
+
+// 与 mixin 相同，也可以传递若干个全局变量给函数作为参数。一个函数可以含有多条语句，需要调用 @return 输出结果。
+// 自定义的函数也可以使用关键词参数，上面的例子还可以这样写：
+#sidebar1 { width: grid-width($n: 5); }
+
+// 建议在自定义函数前添加前缀避免命名冲突，其他人阅读代码时也会知道这不是 Sass 或者 CSS 的自带功能。
+
+// 实例.
+@function grid-auto-width($width: 102) {
+    $resWidth: 0px;
+
+    @if $width > 100 and $width < 200 {
+        $resWidth: 101px;
+    } @else if $width > 200 and $width < 300 {
+        $resWidth: 201px;
+    } @else {
+        $resWidth: 301px;
+    }
+
+    @return $resWidth;
+}
+
+body {
+    width: grid-auto-width();
+}
+
+p {
+    width: grid-auto-width(220);
+}
+
+div {
+    width: grid-auto-width(400);
+}
+
+@function test($height: 3) {
+    $resHeight: 0;
+
+    @if $height > 3 or $height < 5 {
+        $resHeight: 3px;
+    } @else if $height > 3 or $height < 4 {
+        $resHeight: 6px;
+    } @else if $height > 4 or $height < 5 {
+        $resHeight: 4px;
+    } @else {
+        $resHeight: 10px;
+    }
+
+    @return $resHeight;
+}
+
+body {
+    height: test();
+    height: test(-1);
+    height: test(100);
+}

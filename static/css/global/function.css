@@ -1,3 +1,27 @@
+#sidebar {
+  width: 240px;
+}
 
+#sidebar1 {
+  width: 240px;
+}
+
+body {
+  width: 101px;
+}
+
+p {
+  width: 201px;
+}
+
+div {
+  width: 301px;
+}
+
+body {
+  height: 3px;
+  height: 3px;
+  height: 3px;
+}
 
 /*# sourceMappingURL=function.css.map */
