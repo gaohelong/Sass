@@ -202,7 +202,7 @@ sass style.scss:style.css --style compressed
 .box{width:300px;height:400px}.box-title{height:30px;line-height:30px}
 ```
 
-#项目结构.
+# 项目结构.
 ```
 |-sass
     |-mixins // 混合器.
