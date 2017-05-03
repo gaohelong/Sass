@@ -201,3 +201,40 @@ sass style.scss:style.css --style compressed
 ```css
 .box{width:300px;height:400px}.box-title{height:30px;line-height:30px}
 ```
+
+#项目结构.
+```
+|-sass
+    |-mixins // 混合器.
+        |-_alert.scss
+    |-utils // 工具.
+        |-_align.scss
+    |-components // 组件.
+        |-_form.scss // 所有表单组件.
+        |-_list.scss // 所有列表组件.
+        |-_grid.scss // 所有表格组件.
+    |-themes // 主题.
+        |-_default.scss // 默认主题.
+
+    |-_alert.scss // 全局提示
+    |-_variables.scss // 全局变量.
+
+    |-main.scss // 全局公用css.   
+    |-modules // 模块.
+        |-domain
+            |-domain.scss
+        |-sourceTpl
+            |-sourceTpl.scss
+
+|-css
+    |-main.css // sass生成.
+    |-bootstrap.min.css // 第三方全局公用css.
+    |-modules // sass生成.
+        |-domain
+            |-domain.css
+        |-sourceTpl
+            |-sourceTpl.css
+    |-vendor // 第三方css.
+        |-date
+            |-date.css
+```
