@@ -205,36 +205,34 @@ sass style.scss:style.css --style compressed
 # 项目结构.
 ```
 |-sass
-    |-mixins // 混合器.
-        |-_alert.scss
-    |-utils // 工具.
-        |-_align.scss
-    |-components // 组件.
-        |-_form.scss // 所有表单组件.
-        |-_list.scss // 所有列表组件.
-        |-_grid.scss // 所有表格组件.
-    |-themes // 主题.
-        |-_default.scss // 默认主题.
-
-    |-_alert.scss // 全局提示
-    |-_variables.scss // 全局变量.
-
-    |-main.scss // 全局公用css.   
-    |-modules // 模块.
-        |-domain
-            |-domain.scss
-        |-sourceTpl
-            |-sourceTpl.scss
+    |-main.scss             // 全局样式.
+    |-_reboot.scss          // 重置浏览器默认样式.
+    |-components            // 【组件】
+        |-_components.scss  // 组合所有组件的核心文件.
+        |-_alert.scss       // 提示框组件.
+        |-_dialog.scss      // 弹出窗口组件.
+    |-mixins                // 【混合器】
+        |-_mixins.scss      // 组合所有混合气的核心文件.
+        |-_box-shadow.scss  // 阴影混合器.
+        |-_box-sizing.scss  // 盒模型混合器.
+    |-functions             // 【自定义函数】
+        |-_functions.scss   // 组合所有自定义函数的核心文件.
+        |-_list.scss        // 生成列表的自定义函数.
+    |-variables             // 【变量】
+        |-_variables.scss   // 全局变量定义.
+    |-themes                // 【主题】
+        |-_default.scss     // 默认主题.
+    |-modules               // 具体模块.
+        |-domain            // 【域名模块】
+            |-domain.scss   // 域名模块
 
 |-css
-    |-main.css // sass生成.
-    |-bootstrap.min.css // 第三方全局公用css.
-    |-modules // sass生成.
+    |-main.css              // sass生成.
+    |-bootstrap.min.css     // 第三方css框架.
+    |-modules               // 模块.
         |-domain
             |-domain.css
-        |-sourceTpl
-            |-sourceTpl.css
-    |-vendor // 第三方css.
+    |-vendor                // 第三方插件.
         |-date
             |-date.css
 ```
