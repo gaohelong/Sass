@@ -3,7 +3,7 @@ body {
     font-size:      12px;
     font-family:    Helvetica Neue, Arial, Microsoft Yahei, Helvetica, sans-serif, Lato;
     line-height:    1.5;
-    color:          $sys-c-505d66;
+    color:          $light-grey;
     letter-spacing: $letter-spacing;
     overflow-y:     hidden;
 }
@@ -30,15 +30,15 @@ abbr, acronym {
     border:       0;
     font-variant: $normal;
 }
-a { color: $sys-c-505d66; }
+a { color: $light-grey; }
 a:link, a:hover, a:active {
-    color:           $sys-c-505d66;
+    color:           $light-grey;
     text-decoration: $link-decoration;
     outline:         0 $none;
 }
 textarea { resize: $none; }
 input, textarea, select {
-    color:          $sys-c-b8c2c9;
+    color:          $grayish;
     outline:        $none;
     letter-spacing: $letter-spacing-1_2;
 }
@@ -69,5 +69,5 @@ label {
 }
 button[disabled], html input[disabled] {
     cursor:           default;
-    background-color: $sys-c-f6f6f6;
+    background-color: $light-white;
 }
