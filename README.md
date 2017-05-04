@@ -217,12 +217,13 @@ sass style.scss:style.css --style compressed
         |-_box-sizing.scss  // 盒模型混合器.
     |-functions             // 【自定义函数】
         |-_functions.scss   // 组合所有自定义函数的核心文件.
-        |-_list.scss        // 生成列表的自定义函数.
+        |-_global.scss      // 全局自定义函数.
     |-variables             // 【变量】
         |-_variables.scss   // 全局变量定义.
     |-themes                // 【主题】
         |-_default.scss     // 默认主题.
     |-modules               // 具体模块.
+        |-_core.scss        // 模块核心文件(变量、混合器、自定义函数……).
         |-domain            // 【域名模块】
             |-domain.scss   // 域名模块
 

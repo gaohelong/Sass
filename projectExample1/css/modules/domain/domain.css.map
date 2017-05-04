@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,kBAAW;EACP,KAAK,ECFD,WAAoB",
+"sources": ["../../../sass/modules/domain/domain.scss","../../../sass/functions/_global.scss"],
+"names": [],
+"file": "domain.css"
+}

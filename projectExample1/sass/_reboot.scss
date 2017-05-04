@@ -67,7 +67,7 @@ input, textarea, select {
 label {
     font-weight: $normal;
 }
-button[disabled],html input[disabled] {
+button[disabled], html input[disabled] {
     cursor:           default;
     background-color: $sys-c-f6f6f6;
 }
