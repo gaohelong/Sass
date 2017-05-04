@@ -223,7 +223,7 @@ sass style.scss:style.css --style compressed
     |-themes                // 【主题】
         |-_default.scss     // 默认主题.
     |-modules               // 具体模块.
-        |-_core.scss        // 模块核心文件(变量、混合器、自定义函数……).
+        |-_core.scss        // 模块核心(import变量、混合器、自定义函数……).
         |-domain            // 【域名模块】
             |-domain.scss   // 域名模块
 
