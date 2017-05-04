@@ -1,5 +1,5 @@
 //【Colors】
-// 设置全局颜色默认值.
+// 设置全局颜色值.
 $white:  #fff    !default;
 $black:  #000    !default;
 $red:    #d9534f !default;
@@ -8,27 +8,32 @@ $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
 $blue:   #0275d8 !default;
 
-// 设置全局字体颜色.
-$gray-dark: #292b2c !default;
-$gray:      #464a4c !default;
+// 设置全局字体颜色值.
+$sys-c-505d66: #505d66 !default;
+$sys-c-b8c2c9: #b8c2c9 !default;
+$sys-c-f6f6f6: #f6f6f6 !default;
 
 //【Options】
 // 设置全局开关默认值.
-$enable-rounded:            true  !default; // 启用圆角.
-$enable-shadows:            false !default; // 启用阴影.
-$enable-transitions:        true  !default; // 启用过渡效果.
+$enable-rounded:     true  !default; // 启用圆角.
+$enable-shadows:     true  !default; // 启用阴影.
+$enable-transitions: true  !default; // 启用过渡效果.
 
 //【Body】
 // 设置body默认背景颜色、字体颜色.
-$body-bg:       $white     !default;
-$body-color:    $gray-dark !default;
+$body-bg:       $white        !default;
+$body-color:    $sys-c-505d66 !default;
 
 //【Links】
 // 设置链接默认值.
-$link-color:            $gray-dark !default;
-$link-decoration:       none !default;
+$link-color:            $sys-c-505d66            !default;
+$link-decoration:       none                     !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: underline                !default;
+
+//【Spacing】
+$letter-spacing:     1.4px !default;
+$letter-spacing-1_2: 1.2px !default;
 
 //【Border】
 $border-width: 1px !default;
@@ -50,5 +55,10 @@ $border-radius: 6px !default;
 
 //【Close】
 
+//【Error】
+$err-c-ff520d: #ff520d !default;
+
 //【其他】
-$none: none;
+$p-100:  100%   !default;
+$none:   none   !default;
+$normal: normal !default;

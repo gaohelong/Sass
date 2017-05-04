@@ -46,10 +46,11 @@ abbr, acronym {
 }
 
 a {
-  color: #fff;
+  color: #505d66;
 }
 
 a:link, a:hover, a:active {
+  color: #505d66;
   text-decoration: none;
   outline: 0 none;
 }
@@ -59,19 +60,21 @@ textarea {
 }
 
 input, textarea, select {
-  outline: none;
   color: #b8c2c9;
+  outline: none;
   letter-spacing: 1.2px;
 }
 
 .bdb-content-box {
   box-sizing: content-box;
+  -ms-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
 }
 
 .bdb-border-box {
   box-sizing: border-box;
+  -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
@@ -91,7 +94,7 @@ input, textarea, select {
 }
 
 .row, .form-group {
-  margin: 0px;
+  margin: 0;
 }
 
 .help-block {
