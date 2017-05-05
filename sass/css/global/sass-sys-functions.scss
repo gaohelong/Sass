@@ -1,0 +1,6 @@
+// rgba函数, 第一个参数16进制颜色值，第二个参数是透明度.
+$color: green;
+.row {
+    color: $color;
+    color: rgba($color, 0.9);
+}

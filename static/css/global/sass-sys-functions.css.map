@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACD,KAAK,EAFD,KAAK;EAGT,KAAK,EAAE,oBAAiB",
+"sources": ["../../../sass/css/global/sass-sys-functions.scss"],
+"names": [],
+"file": "sass-sys-functions.css"
+}
